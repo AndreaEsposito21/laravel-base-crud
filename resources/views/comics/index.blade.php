@@ -18,10 +18,18 @@
                                 <p class="card-text">{{ $comic->description }}</p>
                             @endif
 
+                            {{-- Show --}}
                             <a href="{{ route('comics.show', [
                                 'comic' => $comic->id
                             ]) }}" class="btn btn-primary">
                                 Dettagli
+                            </a>
+
+                            {{-- Edit --}}
+                            <a href="{{ route('comics.edit', [
+                                'comic' => $comic->id
+                            ]) }}" class="btn btn-secondary">
+                                Modifica
                             </a>
                         </div>
                     </div>
